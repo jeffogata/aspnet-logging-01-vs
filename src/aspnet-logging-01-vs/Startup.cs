@@ -16,7 +16,9 @@
         {
             loggerFactory.MinimumLevel = LogLevel.Debug;
 
-            loggerFactory.AddDebug(LogLevel.Debug);
+            loggerFactory
+                .AddConsole(LogLevel.Debug)
+                .AddDebug(LogLevel.Debug);
                 
             app.UseIISPlatformHandler();
 
